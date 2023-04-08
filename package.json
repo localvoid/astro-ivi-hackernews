@@ -9,14 +9,21 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "netlify deploy --build",
-    "deploy:prod": "netlify deploy"
+    "deploy:prod": "netlify deploy --build --prod"
   },
   "dependencies": {
-    "astro": "^2.1.9",
-    "@astrojs/netlify": "^2.2.0",
-    "netlify-cli": "^13.2.2",
-    "ivi": "^3.0.0-beta.2",
-    "@ivi/htm": "^3.0.0-beta.2",
-    "@ivi/astro": "^3.0.0-beta.2"
+    "@astrojs/netlify": "^2.2.1",
+    "@ivi/astro": "^3.0.0",
+    "@ivi/htm": "^3.0.0",
+    "astro": "^2.2.1",
+    "ivi": "^3.0.0",
+    "netlify-cli": "^13.2.2"
+  },
+  "pnpm": {
+    "//overrides": {
+      "ivi": "../ivi/packages/ivi",
+      "@ivi/htm": "../ivi/packages/@ivi/htm",
+      "@ivi/astro": "../ivi/packages/@ivi/astro"
+    }
   }
 }
